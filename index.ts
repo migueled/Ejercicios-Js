@@ -1,7 +1,10 @@
-const suma_de_elementos=(datos:number[])=>{
-    return datos.reduce((acumulador,elemento)=>acumulador+elemento,0);
-}
+const datos_limpios=(datos:number[])=> datos.reduce((acc,el)=>{
+    if(el){
+        acc.push(el);
+    }
+    return acc;
+},[]);
 
-const datos=suma_de_elementos([3,6,1,4,5]);
+const datos=datos_limpios([1,6,undefined,12,null,76,0]);
 
-console.log(`la suma de todos los elementos es ${datos}`);
+console.log(datos);
