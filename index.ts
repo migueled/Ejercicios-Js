@@ -1,10 +1,5 @@
-const datos_limpios=(datos:number[])=> datos.reduce((acc,el)=>{
-    if(el){
-        acc.push(el);
-    }
-    return acc;
-},[]);
+const datos_limpios=(datos:number[])=> datos.reduce((acc,el)=>acc.concat(el),[]);
 
-const datos=datos_limpios([1,6,undefined,12,null,76,0]);
+const datos=datos_limpios([[1,2],[[3,4]],[1,[]]]);
 
 console.log(datos);
