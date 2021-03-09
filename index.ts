@@ -1,5 +1,5 @@
-function factorial( numero:number  ):number{            
-        return numero <= 1 ? 1 : numero * factorial(numero-1);
+const factorial =( numero:number ):number => {
+    return numero <= 1 ? 1 : numero * factorial(numero-1);
 }
 
 const numero = factorial(5);
