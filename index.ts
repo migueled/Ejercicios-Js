@@ -14,17 +14,12 @@ const mascotas=[
     }
 ];
 
-const numeros                   = [10,2,9,10];
+const numeros             = [1,4,5,7,3,9].reduce( ( acumulador , elemento ) => acumulador + elemento ,0);
 
-const multiplicados             = numeros.map( elemento => elemento * 2);
+const numeros_mascotas    = mascotas.reduce( ( acumulador , elemento ) => ({
+    ...acumulador,
+    [ elemento.nombre ] : elemento ,
+}),{});
 
-const parejas                   = numeros.map( elemento => [ elemento , elemento ] );
-
-const obtener_numeros_mascotas  = mascotas.map( elemento => parseInt( elemento.edad ) );
-
-const suma_numeros              = obtener_numeros_mascotas.reduce( ( acumulador , elemento ) => acumulador + elemento);
-//console.log(parejas);
-//console.log(multiplicados);
-console.log(obtener_numeros_mascotas);
-console.log(suma_numeros);
+console.log(numeros_mascotas['Masha']);
 

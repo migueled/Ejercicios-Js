@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var mascotas = [
     {
         nombre: "Masha",
@@ -14,12 +25,9 @@ var mascotas = [
         raza: "perro"
     }
 ];
-var numeros = [10, 2, 9, 10];
-var multiplicados = numeros.map(function (elemento) { return elemento * 2; });
-var parejas = numeros.map(function (elemento) { return [elemento, elemento]; });
-var obtener_numeros_mascotas = mascotas.map(function (elemento) { return parseInt(elemento.edad); });
-var suma_numeros = obtener_numeros_mascotas.reduce(function (acumulador, elemento) { return acumulador + elemento; });
-//console.log(parejas);
-//console.log(multiplicados);
-console.log(obtener_numeros_mascotas);
-console.log(suma_numeros);
+var numeros = [1, 4, 5, 7, 3, 9].reduce(function (acumulador, elemento) { return acumulador + elemento; }, 0);
+var numeros_mascotas = mascotas.reduce(function (acumulador, elemento) {
+    var _a;
+    return (__assign(__assign({}, acumulador), (_a = {}, _a[elemento.nombre] = elemento, _a)));
+}, {});
+console.log(numeros_mascotas['Masha']);
