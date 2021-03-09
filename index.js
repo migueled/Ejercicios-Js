@@ -1,9 +1,4 @@
 "use strict";
-/*const datos:number[]=[1,2,3,4,5,6,7,8,9];
-
-const filtro=datos.filter( elemento => elemento < 5);
-
-console.log(`los datos son ${filtro}`);*/
 var mascotas = [
     {
         nombre: "Masha",
@@ -19,9 +14,12 @@ var mascotas = [
         raza: "perro"
     }
 ];
-var filtro_perros = mascotas.filter(function (tipo) { return tipo.raza == 'perro'; });
-var contador_perros = filtro_perros.length;
-var filtro_gatos = mascotas.filter(function (tipo) { return tipo.raza == 'gato'; });
-var contador_gatos = filtro_gatos.length;
-console.log("los perros son " + filtro_perros + " con cantidad de " + contador_perros);
-console.log("los perros son " + filtro_gatos + " con cantidad de " + contador_gatos);
+var numeros = [10, 2, 9, 10];
+var multiplicados = numeros.map(function (elemento) { return elemento * 2; });
+var parejas = numeros.map(function (elemento) { return [elemento, elemento]; });
+var obtener_numeros_mascotas = mascotas.map(function (elemento) { return parseInt(elemento.edad); });
+var suma_numeros = obtener_numeros_mascotas.reduce(function (acumulador, elemento) { return acumulador + elemento; });
+//console.log(parejas);
+//console.log(multiplicados);
+console.log(obtener_numeros_mascotas);
+console.log(suma_numeros);
