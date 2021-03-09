@@ -1,5 +1,13 @@
-const datos_limpios=(datos:number[])=> datos.reduce((acc,el)=>acc.concat(el),[]);
+const respuesta = (palindromo:string) => {
+    let eliminar_espacios  = palindromo.replace(/\s/g,'');
+    let minusculas         = eliminar_espacios.toLowerCase();
+    let dividir            = minusculas.split('');
+    let invertido          = dividir.reverse();
+    let join               = invertido.join('');
+        
+    return minusculas == join;
+};
 
-const datos=datos_limpios([[1,2],[[3,4]],[1,[]]]);
+const palindromo = respuesta( 'Alli va Ramon y no maravilla' );
 
-console.log(datos);
+console.log( palindromo );
