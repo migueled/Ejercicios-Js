@@ -1,6 +1,4 @@
 "use strict";
-var factorial = function (numero) {
-    return numero <= 1 ? 1 : numero * factorial(numero - 1);
-};
-var numero = factorial(5);
-console.log("el factorial es " + numero);
+var arr = [1, 2, 3, 9, 12, 3, 27];
+var max = Math.max.apply(Math, arr);
+console.log(max);

@@ -1,7 +1,3 @@
-const factorial =( numero:number ):number => {
-    return numero <= 1 ? 1 : numero * factorial(numero-1);
-}
-
-const numero = factorial(5);
-
-console.log(`el factorial es ${ numero }`);
+const arr = [1, 2, 3, 9 ,12 , 3 ,27];
+const max = Math.max(...arr);
+console.log(max);
