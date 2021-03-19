@@ -1,5 +1,9 @@
 "use strict";
-var arr = [1, 2, 3, 9, 12, 3, 27];
-var max = Math.max.apply(Math, arr);
-var min = Math.min.apply(Math, arr);
-console.log("El valor max es " + max + " el valor minimo es " + min);
+var altura = 1.75;
+var peso = 56;
+/*peso/kilogramoos^2*/
+var IMC = function (peso, altura) {
+    return "El IMC es " + peso / (Math.pow(altura, 2));
+};
+var resultado = IMC(65, 1.60);
+console.log(resultado);
